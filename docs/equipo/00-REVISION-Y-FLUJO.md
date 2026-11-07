@@ -14,6 +14,6 @@ No contiene `.git`, `Library`, `Logs`, `UserSettings`, archivos `bin/obj`, build
 
 ## Punto de partida de Git
 
-No se han creado commits en nombre de Mauro, Sergio o Christian. El remoto todavía parte de un commit de inicialización vacío, así que #1 describe la importación inicial que Albert debe publicar en un PR auténtico. Los issues #2–#4 esperan ese merge; sus guías contienen los comandos de rama, staging, commit y apertura de PR.
+La importación inicial está publicada en el [PR #5](https://github.com/frix241/La-Resurreccion-del-Huascar/pull/5), asignado a Albert y con revisión solicitada a Sergio y Christian. Los issues #2–#4 parten de `master` después del merge de ese PR. Las ramas y números de issue de las guías enviadas se mantienen.
 
-La Action compila y ejecuta `Tests/CoreChecks` en .NET 10 al abrir un PR o actualizar `master`/`develop`. El workflow está en el estado fuente; Actions mostrará un run cuando la rama de integración se publique y abra el PR de #1. El último chequeo local documentado fue 33/33; PlayMode Unity fue 23/23 en el entorno de desarrollo.
+Actions ejecutó correctamente CoreChecks (33/33) y Repository checks en el primer snapshot. Cada actualización del PR tiene su propio run. El resultado actual y las reglas están en [REPOSITORIO.md](../REPOSITORIO.md). Unity EditMode/PlayMode se valida en el Editor y no está cubierto por la Action .NET.

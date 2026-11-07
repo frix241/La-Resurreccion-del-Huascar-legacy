@@ -13,7 +13,7 @@ Videojuego naval 2D de historia alternativa, desarrollado como proyecto de **Tec
 1. Instala Unity Editor **6000.6.8f1**, versión de `ProjectSettings/ProjectVersion.txt`.
 2. Añade la raíz del proyecto desde Unity Hub y espera a que termine la importación.
 3. Abre `Assets/_LRH/Scenes/Main.unity` y pulsa Play.
-4. Valida el cambio con los casos del issue. Para compilar Linux instala el módulo correspondiente y consulta `Assets/_LRH/Editor/`.
+4. Valida el cambio con los casos del issue. Para compilar Linux instala el módulo correspondiente y selecciona Linux Standalone con `Main.unity` como escena de inicio.
 
 El proyecto incluye tres misiones: interceptar una patrullera, escoltar un convoy y neutralizar baterías costeras. El código del núcleo dispone de 33 comprobaciones .NET; el entorno de desarrollo registró 23/23 PlayMode en la revisión del 7 de noviembre. CI publica su propio resultado para cada PR. Los artefactos y capturas locales se distribuyen fuera de Git.
 
@@ -39,7 +39,7 @@ dotnet run --project Tests/CoreChecks/CoreChecks.csproj
 
 Resultado actual: **33/33 comprobaciones .NET** con SDK **10.0.114**. Unity Editor **6000.6.8f1** compiló la build Linux y pasó **23/23 pruebas PlayMode**. Las capturas finales están en `Build/Artifacts/retro-captures/`; los artefactos de Build se excluyen de los commits. Consulta [plan de pruebas y alcance](docs/04_pruebas.md).
 
-El workflow [CI](.github/workflows/ci.yml) ejecuta las comprobaciones .NET al hacer push o abrir un pull request hacia `develop` o `main`. Las pruebas PlayMode y la build de Unity se ejecutan localmente; requieren el Editor instalado.
+El workflow [CI](.github/workflows/ci.yml) ejecuta las comprobaciones .NET al hacer push o abrir un pull request hacia `master` o `develop`. Las pruebas PlayMode y la build de Unity se ejecutan localmente; requieren el Editor instalado.
 
 ## Organización del proyecto
 
@@ -72,29 +72,23 @@ Los PlayMode inyectan `MemoryRepository` mediante `GameRoot.ConfigureRepository`
 | Christian | ChristianAlexYana |
 | Albert | frix241 |
 
-La aceptación de Unity/C# frente al énfasis del sílabo en C++/Qt/CMake, así como la fecha y la rúbrica de entrega, **deben confirmarse con la docente**. No asignar créditos a personas ni publicar URLs del repositorio hasta conocer los datos reales.
+La aceptación de Unity/C# frente al énfasis del sílabo en C++/Qt/CMake, así como la fecha y la rúbrica de entrega, **deben confirmarse con la docente**. Las cuentas del equipo están vinculadas en los issues y en el tablero del proyecto.
 
 La pantalla de créditos incluye los cuatro identificadores proporcionados por el equipo, sin correos electrónicos.
 
 **Aviso histórico:** obra de ficción inspirada en un contexto histórico. Los eventos y enfrentamientos del juego no son acontecimientos históricos reales.
 
-## Nueva presentación pixel art
+## Arte y mapa
 
-El set raster generado se integra desde `Assets/_LRH/Resources/Pixel/`: flota cenital, mar, costa, menú, logo, carta y superficies UI con estados de botones. Build Linux: `Build/Artifacts/LRH-generated-pixel.x86_64`. Véase [registro de arte, prompts y verificación](docs/ARTE_PIXEL_GENERADO.md).
+La presentación activa es ilustración 2D pintada con contornos entintados, salida a **1920×1080**, UI y tipografía comunes. El mapa utiliza celdas texturizadas y objetos con colisiones; el minimapa se deriva del mismo mapa guardado. En Unity, **LRH > Editor de terreno** permite editarlo.
 
-La revisión más reciente es **`Build/Artifacts/LRH-open-sea.x86_64`**, con UI redondeada, cámara que sigue al Huáscar, navegación sin el límite anterior y flecha al convoy. [Detalle y validación](docs/MEJORAS_MAR_ABIERTO.md).
+- [Arte actual y validación](docs/ARTE_ILUSTRADO.md)
+- [Editor de terreno y límites](docs/TERRENO_MODULAR.md)
+- [HUD y objetivos](docs/HUD_Y_LIMITES.md)
+- [Audio y contactos entre barcos](docs/AUDIO_Y_CONTACTOS.md)
 
-## Versión actual: terreno modular
+Los documentos de versiones anteriores se conservan como historial. Sus rutas de builds corresponden al entorno de desarrollo y no forman parte del árbol Git.
 
-Ejecutar **`./Build/JUGAR_LRH.sh`** para abrir `LRH-terrain.x86_64`. Esta versión sustituye el fondo geográfico por celdas texturizadas y objetos fijos con colisiones. En Unity, **LRH > Editor de terreno** permite pintar el mapa y colocar objetos. El minimapa se deriva del mismo mapa guardado. [Uso y límites](docs/TERRENO_MODULAR.md) · [Investigación oficial](docs/research_terrain_editor.md).
+## Estado de integración
 
-
-La revisión actual incorpora límites de mapa, HUD con barras de vida y objetivos, selección del objetivo más cercano y créditos actualizados. [Cambios y verificación](docs/HUD_Y_LIMITES.md). Usar `./Build/JUGAR_LRH.sh`.
-
-La versión actual también corrige el empujón entre cascos e incorpora efectos, temas de menú/combate y ambiente marino. [Detalle y pruebas](docs/AUDIO_Y_CONTACTOS.md). Se abre con el mismo lanzador `./Build/JUGAR_LRH.sh`.
-
-La presentación más reciente unifica el acabado pintado del terreno, barcos y UI e incorpora fondos propios de victoria y derrota, con opciones de continuar, repetir y volver al menú. [Estilo y verificación](docs/ESTILO_Y_RESULTADOS.md). Ejecutar el mismo lanzador `./Build/JUGAR_LRH.sh`.
-
-## Presentación actual: arte ilustrado a 1920 × 1080
-
-El arte activo usa ilustración 2D pintada y contornos entintados en el mar, barcos, costa, objetos y fondos. La tipografía, los paneles y los botones mantienen un solo lenguaje visual; la salida se conserva en **1920 × 1080** sin reducir el render a una cuadrícula de píxeles. [Dirección y verificación](docs/ARTE_ILUSTRADO.md). Ejecutar `./Build/JUGAR_LRH.sh`.
+La importación fuente está en el [PR #5](https://github.com/frix241/La-Resurreccion-del-Huascar/pull/5). Tras su aprobación e integración, el equipo abre las ramas de las guías desde `master`. [Reglas del repo y evidencia](docs/REPOSITORIO.md).
