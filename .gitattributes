@@ -1,0 +1,10 @@
+* text=auto
+*.png binary
+*.wav binary
+*.ogg binary
+# Unity writes empty YAML values with trailing spaces; Markdown uses hard breaks.
+*.meta whitespace=-blank-at-eol
+*.asset whitespace=-blank-at-eol
+*.unity whitespace=-blank-at-eol
+*.md whitespace=-blank-at-eol
+Assets/_LRH/Resources/Fonts/*.txt whitespace=-blank-at-eol

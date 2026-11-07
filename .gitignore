@@ -1,0 +1,38 @@
+# Unity generated
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/Build/
+/Builds/
+*.csproj
+*.sln
+*.slnx
+*.user
+*.unityproj
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.bak
+*.tmp
+*.orig
+.vs/
+.idea/
+.vscode/
+# Keep the hand-written test project but not its generated output
+!/Tests/CoreChecks/CoreChecks.csproj
+**/bin/
+**/obj/
+.superpowers/
+
+# Local delivery and crash output
+mono_crash.*
+__pycache__/
+*.pyc
+*.zip
+core-checks.log
