@@ -32,6 +32,24 @@ for name in filter(None, files):
     if full.suffix in {'.cs', '.py', '.json', '.yml', '.yaml', '.unity', '.asmdef'}:
         if re.search(r'^(?:<{7} |={7}$|>{7} )', full.read_text(encoding='utf-8-sig'), re.M):
             errors.append(f'{name}: unresolved merge conflict')
+# Keep Unity asset identities stable across machines and branches.
+guids = {}
+for name in filter(None, files):
+    path = Path(name)
+    if not name.startswith('Assets/'):
+        continue
+    full = root / name
+    if path.suffix != '.meta':
+        if not Path(str(full) + '.meta').is_file():
+            errors.append(f'{name}: Unity metadata missing')
+        continue
+    match = re.search(r'^guid: ([0-9a-f]{32})$', full.read_text(encoding='utf-8-sig'), re.M)
+    if not match:
+        errors.append(f'{name}: invalid Unity metadata GUID')
+    elif match[1] in guids:
+        errors.append(f'{name}: duplicate Unity GUID also in {guids[match[1]]}')
+    else:
+        guids[match[1]] = name
 for err in errors:
     print(err, file=sys.stderr)
 print(f'Repository checks: {len(errors)} errors; {count} JSON files parsed.')
