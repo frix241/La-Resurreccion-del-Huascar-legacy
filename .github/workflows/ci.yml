@@ -1,0 +1,63 @@
+name: CI
+on:
+  push:
+    branches: [master, develop]
+  pull_request:
+    branches: [master, develop]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  core-checks:
+    name: Core checks (.NET 10)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Detect core suite
+        id: suite
+        run: |
+          if test -f Tests/CoreChecks/CoreChecks.csproj; then echo "present=true" >> "$GITHUB_OUTPUT"; else echo "present=false" >> "$GITHUB_OUTPUT"; echo "CoreChecks pendiente de incorporar en issue #2; no se ejecutaron pruebas .NET." >> "$GITHUB_STEP_SUMMARY"; fi
+      - uses: actions/setup-dotnet@v4
+        if: steps.suite.outputs.present == 'true'
+        with:
+          dotnet-version: 10.0.x
+      - name: Restore
+        if: steps.suite.outputs.present == 'true'
+        run: dotnet restore Tests/CoreChecks/CoreChecks.csproj
+      - name: Run core checks
+        if: steps.suite.outputs.present == 'true'
+        shell: bash
+        run: |
+          set -o pipefail
+          dotnet run --no-restore --configuration Release --project Tests/CoreChecks/CoreChecks.csproj | tee core-checks.log
+      - name: Test evidence
+        if: always() && steps.suite.outputs.present == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: core-checks-${{ github.run_id }}
+          path: core-checks.log
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Job summary
+        if: always() && steps.suite.outputs.present == 'true'
+        shell: bash
+        run: |
+          echo '### Core checks (.NET 10)' >> "$GITHUB_STEP_SUMMARY"
+          echo '```text' >> "$GITHUB_STEP_SUMMARY"
+          tail -n 40 core-checks.log >> "$GITHUB_STEP_SUMMARY" || true
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+  repository-checks:
+    name: Repository checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate tracked source and configuration
+        run: python Tools/check_repository.py

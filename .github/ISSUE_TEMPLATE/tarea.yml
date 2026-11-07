@@ -1,0 +1,40 @@
+name: Tarea
+description: Trabajo acotado del proyecto
+title: "[Tarea] "
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: Qué debe quedar resuelto.
+    validations:
+      required: true
+  - type: textarea
+    id: aceptacion
+    attributes:
+      label: Criterios de aceptación
+      description: Cómo se comprobará que está listo.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: archivos
+    attributes:
+      label: Archivos previstos
+      description: Rutas que se espera modificar; actualiza esta lista si el trabajo lo requiere.
+    validations:
+      required: false
+  - type: dropdown
+    id: pruebas
+    attributes:
+      label: Pruebas
+      options:
+        - .NET CoreChecks
+        - Unity EditMode
+        - Unity PlayMode
+        - Revisión visual manual
+        - Otra
+    validations:
+      required: true
