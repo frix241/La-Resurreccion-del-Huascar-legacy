@@ -1,0 +1,11 @@
+{
+  "name": "LRH.Runtime",
+  "rootNamespace": "LRH.Runtime",
+  "references": ["LRH.Core", "Unity.InputSystem", "Unity.ugui"],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true
+}

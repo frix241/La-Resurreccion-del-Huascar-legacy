@@ -1,0 +1,10 @@
+{
+  "name": "LRH.EditMode.Tests",
+  "rootNamespace": "LRH.Tests",
+  "references": ["LRH.Core"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "overrideReferences": true,
+  "precompiledReferences": ["nunit.framework.dll"],
+  "autoReferenced": false
+}

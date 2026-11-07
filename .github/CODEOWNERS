@@ -1,0 +1,16 @@
+# Review routing. Repository protection requires an independent approval.
+/.github/ @frix241
+/ProjectSettings/ @frix241
+/docs/ @frix241
+/Assets/_LRH/Scripts/Core/Mission.cs @MauroSullcaMamani
+/Assets/_LRH/Scripts/Core/Progress*.cs @MauroSullcaMamani
+/Assets/_LRH/Scripts/Runtime/ProgressRepository.cs @MauroSullcaMamani
+/Assets/_LRH/Scripts/Runtime/ShipActor.cs @SrEstrada
+/Assets/_LRH/Scripts/Runtime/OpenSea.cs @SrEstrada
+/Assets/_LRH/Scripts/Runtime/TerrainMap.cs @SrEstrada
+/Assets/_LRH/Art/ @ChristianAlexYana
+/Assets/_LRH/Resources/ @ChristianAlexYana
+/Assets/_LRH/Resources/Maps/ @SrEstrada
+/Assets/_LRH/Scripts/Runtime/SoundFx.cs @ChristianAlexYana
+/Assets/_LRH/Scripts/Runtime/UiVisuals.cs @ChristianAlexYana
+/Tools/generate_audio.py @ChristianAlexYana

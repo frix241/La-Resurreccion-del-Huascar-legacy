@@ -1,0 +1,23 @@
+{
+  "asset_pack": "Alternate Pacific Naval Strategy / fictional",
+  "reference": "User-supplied fictional ironclad image",
+  "camera": "Elevated 3/4 isometric, facing right where applicable",
+  "sprites": {
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "mode": "RGBA",
+    "transparency": true
+  },
+  "backgrounds": {
+    "dimensions": [
+      2048,
+      1152
+    ],
+    "mode": "RGB",
+    "transparency": false
+  },
+  "usage": "Unity 2D Sprite (2D and UI) for foreground assets; backgrounds as full-frame sprites or textures",
+  "note": "The eight non-reference designs are separated from an illustrated multi-asset generation and upscaled; inspect at final game scale before production."
+}

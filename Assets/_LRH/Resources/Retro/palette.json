@@ -1,0 +1,204 @@
+{
+  "style": "illustrated gothic naval adventure",
+  "colors": [
+    {
+      "name": "ink",
+      "hex": "#101827"
+    },
+    {
+      "name": "deep_sea",
+      "hex": "#102234"
+    },
+    {
+      "name": "sea_glass",
+      "hex": "#277a78"
+    },
+    {
+      "name": "pine",
+      "hex": "#344c43"
+    },
+    {
+      "name": "parchment",
+      "hex": "#d9c8a2"
+    },
+    {
+      "name": "aged_brass",
+      "hex": "#bfaa78"
+    },
+    {
+      "name": "signal_crimson",
+      "hex": "#a63e42"
+    },
+    {
+      "name": "slate",
+      "hex": "#4c5a68"
+    }
+  ],
+  "assets": [
+    {
+      "file": "menu-background.png",
+      "size": "1920x1080",
+      "transparent": false
+    },
+    {
+      "file": "victory-background.png",
+      "size": "1920x1080",
+      "transparent": false
+    },
+    {
+      "file": "defeat-background.png",
+      "size": "1920x1080",
+      "transparent": false
+    },
+    {
+      "file": "huascar.png",
+      "size": "192x384",
+      "transparent": true
+    },
+    {
+      "file": "patrol.png",
+      "size": "192x384",
+      "transparent": true
+    },
+    {
+      "file": "gunboat.png",
+      "size": "192x384",
+      "transparent": true
+    },
+    {
+      "file": "convoy.png",
+      "size": "192x384",
+      "transparent": true
+    },
+    {
+      "file": "battery.png",
+      "size": "256x256",
+      "transparent": true
+    },
+    {
+      "file": "island.png",
+      "size": "256x256",
+      "transparent": true
+    },
+    {
+      "file": "projectile.png",
+      "size": "96x96",
+      "transparent": true
+    },
+    {
+      "file": "wake.png",
+      "size": "192x192",
+      "transparent": true
+    },
+    {
+      "file": "water1.png",
+      "size": "384x384",
+      "transparent": false
+    },
+    {
+      "file": "shallow0.png",
+      "size": "384x384",
+      "transparent": false
+    },
+    {
+      "file": "shallow1.png",
+      "size": "384x384",
+      "transparent": false
+    },
+    {
+      "file": "sand0.png",
+      "size": "384x384",
+      "transparent": false
+    },
+    {
+      "file": "sand1.png",
+      "size": "384x384",
+      "transparent": false
+    },
+    {
+      "file": "stone0.png",
+      "size": "384x384",
+      "transparent": false
+    },
+    {
+      "file": "stone1.png",
+      "size": "384x384",
+      "transparent": false
+    },
+    {
+      "file": "water0.png",
+      "size": "384x384",
+      "transparent": false
+    },
+    {
+      "file": "rocks.png",
+      "size": "256x256",
+      "transparent": true
+    },
+    {
+      "file": "reef.png",
+      "size": "256x256",
+      "transparent": true
+    },
+    {
+      "file": "shrub.png",
+      "size": "256x256",
+      "transparent": true
+    },
+    {
+      "file": "palms.png",
+      "size": "256x256",
+      "transparent": true
+    },
+    {
+      "file": "pier.png",
+      "size": "256x256",
+      "transparent": true
+    },
+    {
+      "file": "ruins.png",
+      "size": "256x256",
+      "transparent": true
+    },
+    {
+      "file": "cliff.png",
+      "size": "256x256",
+      "transparent": true
+    },
+    {
+      "file": "crates.png",
+      "size": "256x256",
+      "transparent": true
+    },
+    {
+      "file": "panel.png",
+      "size": "256x256",
+      "transparent": true
+    },
+    {
+      "file": "normal.png",
+      "size": "256x256",
+      "transparent": true
+    },
+    {
+      "file": "hover.png",
+      "size": "256x256",
+      "transparent": true
+    },
+    {
+      "file": "pressed.png",
+      "size": "256x256",
+      "transparent": true
+    },
+    {
+      "file": "disabled.png",
+      "size": "256x256",
+      "transparent": true
+    },
+    {
+      "file": "header.png",
+      "size": "256x256",
+      "transparent": true
+    }
+  ]
+}

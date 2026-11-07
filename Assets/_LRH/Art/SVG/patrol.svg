@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="240" viewBox="0 0 160 240" shape-rendering="geometricPrecision">
+ <path d="M72 12h16v8h12v12h12v16h8v32h8v48h-8v48h-8v24H96v16H64v-16H48v-24h-8v-48h-8V80h8V48h8V32h12V20h12Z" fill="#1a3039" stroke="#d2ac61" stroke-width="4"/>
+ <path d="M72 28h16v12h8v20h8v52H56V60h8V40h8Z" fill="#a8674f"/>
+ <path d="M56 112h48v48H56Z" fill="#2b4c52"/>
+ <path d="M48 104h64v8H48m32-80h8v112h-8m-32 40h64v8H48" fill="#e0bf76"/>
+ <rect x="64" y="80" width="32" height="32" fill="#142b36" stroke="#eccd83" stroke-width="4"/>
+ <rect x="76" y="48" width="8" height="32" fill="#e4c57c"/>
+ <path d="M40 120H24v8h16m80-8h16v8h-16M48 184H36v8h12m64-8h12v8h-12" fill="none" stroke="#d2ac61" stroke-width="4"/>
+ <path d="M56 64h48M56 152h48" stroke="#f1d58d" stroke-width="3" opacity=".75"/>
+ <path d="M60 120h40v8H60Z" fill="#aeb98e" opacity=".7"/>
+ <circle cx="64" cy="96" r="4" fill="#f5d992"/><circle cx="96" cy="96" r="4" fill="#f5d992"/>
+</svg>
