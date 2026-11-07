@@ -9,7 +9,7 @@
 - La rama debe estar actualizada; conversaciones resueltas antes de integrar.
 - Se descartan aprobaciones anteriores cuando cambia el código.
 - Sin force push ni borrado de master; protección también para administradores.
-- Merge squash y eliminación de la rama integrada.
+- Merge commit para conservar los commits del desarrollador; squash y rebase merge deshabilitados. Eliminación de la rama integrada.
 
 ## Tablero
 

@@ -20,3 +20,7 @@ python Tools/check_repository.py
 Cada issue incluye tareas, puntos estimados y plan de pruebas. Adjunta enlace al run de Actions, commit probado y resultados antes de moverlo a Revisión. Aprobado requiere revisión de otra persona; cerrar el issue corresponde al merge aceptado.
 
 No versionar `Build`, `Library`, `Temp`, `Logs`, `UserSettings`, `bin`, `obj`, ZIPs ni dumps. Distribuye la build final por Releases o el paquete de revisión. Los recursos externos deben conservar atribución y licencia aplicables.
+
+## Commits por tarea
+
+Cada guía en `docs/equipo` divide la tarea en bloques con archivos y mensajes explícitos. Registra el cambio y su regresión antes de pasar al siguiente. El PR conserva la serie; se integra mediante **Create a merge commit**. Consulta [el índice de commits](docs/equipo/06-RESUMEN-DE-COMMITS.md).
