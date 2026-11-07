@@ -120,7 +120,7 @@ cat > /tmp/huasca-issue-1-pr.md <<'MD'
 
 Closes #1.
 
-Incorporación por etapas de los archivos existentes asignados a Albert. Reconstrucción del snapshot dbdce75; los bloques se conservan como commits separados.
+Incorporación por etapas de los archivos existentes asignados a Albert. Archivos de la versión de referencia dbdce75; los bloques se conservan como commits separados.
 
 ## Evidencia
 
@@ -134,7 +134,7 @@ Incorporación por etapas de los archivos existentes asignados a Albert. Reconst
 Revisor previsto: @SrEstrada. Verificar los archivos del manifiesto y los criterios del issue antes del merge.
 MD
 
-gh pr create --repo frix241/La-Resurreccion-del-Huascar --base master --head chore/base-equipo --assignee frix241 --reviewer SrEstrada --title "Reconstrucción: entrega de Albert" --body-file /tmp/huasca-issue-1-pr.md --label reconstruccion
+gh pr create --repo frix241/La-Resurreccion-del-Huascar --base master --head chore/base-equipo --assignee frix241 --reviewer SrEstrada --title "Entrega de Albert" --body-file /tmp/huasca-issue-1-pr.md --label entrega-actual
 ```
 
 Completa la evidencia real del archivo de descripción antes de abrir el PR. Si ya existe un PR de la rama, el push lo actualiza: usa `gh pr view` para consultarlo. El PR necesita los checks del último commit y aprobación independiente. Se integra mediante merge commit para conservar la serie. `Closes #1` cierra el issue cuando el PR se integra, no al abrirlo.

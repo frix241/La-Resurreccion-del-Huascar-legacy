@@ -1,4 +1,4 @@
-# Flujo de reconstrucción
+# Flujo de integración
 
 Orden de integración: #1 Albert, #2 Mauro, #3 Sergio, #4 Christian. Cada paquete incorpora archivos existentes, verifica sus hashes y conserva sus metadatos Unity. La importación completa del PR #5 queda como referencia del snapshot, reemplazada por el flujo por etapas.
 

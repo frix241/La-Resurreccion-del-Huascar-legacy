@@ -1,3 +1,3 @@
-# Reconstrucción de la entrega actual
+# Guía de integración
 
-Se incorporan archivos ya implementados, bajo las identidades reales de quienes revisen y publiquen cada entrega. [Guías por dev](equipo/00-LEEME.md).
+Cada integrante dispone de una guía con sus archivos, bloques de commit, comprobaciones y PR. [Guías por dev](equipo/00-LEEME.md).
