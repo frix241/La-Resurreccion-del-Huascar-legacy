@@ -1,0 +1,33 @@
+name: Historia de usuario
+description: Comportamiento del juego con criterios y pruebas
+title: "[HU] "
+labels: [historia]
+body:
+  - type: textarea
+    id: historia
+    attributes:
+      label: Historia
+      placeholder: Como jugador quiero ... para ...
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      placeholder: "- [ ] Dado ... cuando ... entonces ..."
+    validations:
+      required: true
+  - type: textarea
+    id: tareas
+    attributes:
+      label: Tareas técnicas
+      placeholder: "- [ ] Cambio acotado y sus archivos"
+    validations:
+      required: true
+  - type: textarea
+    id: pruebas
+    attributes:
+      label: Plan de pruebas
+      description: Casos, resultado esperado y cómo ejecutarlos. Adjuntar resultados al terminar.
+    validations:
+      required: true
